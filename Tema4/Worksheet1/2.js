@@ -1,0 +1,1 @@
+document.addEventListener("mousemove",(x)=>console.log("cordenada X: "+ x.clientX +" coordenada Y: " +x.clientY ))
