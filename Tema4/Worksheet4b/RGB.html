@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="RGB.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Contenedor principal para mantener todo centrado y alineado */
+        .contenedor-principal {
+            width: 400spx; /* Igual al ancho máximo de los cuadrados */
+        }
+
+        /* Estilo para el título */
+        h1 {
+            background-color: #003366; /* Azul oscuro */
+            color: white;
+            padding: 20px;
+            width: 90%; /* Para que ocupe el 100% del contenedor principal */
+            text-align: center;
+            margin: 0; /* Elimina el margen por defecto */
+        }
+
+        /* Contenedor para los botones */
+        .dificuldad {
+            display: flex;
+            justify-content: space-between; /* Espacio entre los botones */
+            align-items: center;
+            background-color: #66b3ff; /* Azul claro */
+            padding: 10px 20px; /* Espaciado interno */
+            width: 90%; /* Para que ocupe el 100% del contenedor principal */
+        }
+
+        /* Estilo para los botones */
+        button {
+            padding: 10px 20px; /* Espaciado interno de los botones */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #nuevo {
+            background-color: #007BFF; /* Color de fondo para el botón "Nueva partida" */
+            color: white;
+        }
+
+        #facil {
+            background-color: #28a745; /* Color de fondo para el botón "Facil" */
+            color: white;
+        }
+
+        #dificil {
+            background-color: #dc3545; /* Color de fondo para el botón "Dificil" */
+            color: white;
+        }
+
+        /* Contenedor de cuadrados */
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 360px; /* Ancho máximo para permitir 3 cuadrados por fila */
+            margin: auto;
+            background-color: black; /* Fondo negro para el contenedor */
+            padding: 20px; /* Espaciado interno */
+             /* Bordes redondeados del contenedor */
+        }
+
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 20%; /* Bordes redondeados de los cuadrados */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-principal">
+        <h1 id="rgb">RGB ()</h1>
+        
+        <div class="dificuldad">
+            <button id="nuevo">Nueva partida</button>
+            <div>
+                <button id="facil" onclick="">Facil</button>
+                <button id="dificil">Dificil</button>
+            </div>
+        </div>
+        
+        <div class="contenedor">
+            <div class="cuadrado" ></div>
+            <div class="cuadrado"></div>
+            <div class="cuadrado"></div>
+            <div class="cuadrado"></div>
+            <div class="cuadrado"></div>
+            <div class="cuadrado"></div>
+        </div>
+        <div id="vidas"></div>
+    </div>
+    
+</body>
+</html>
