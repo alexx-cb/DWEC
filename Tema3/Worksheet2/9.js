@@ -22,7 +22,7 @@ for(let i =0;i<36000;i++){
 }
 
 
-/*
+
 function simularLanzamientos(numLanzamientos) {
     const frecuencias = new Array(13).fill(0); 
     const combinaciones = Array.from({ length: 7 }, () => new Array(7).fill(0));
@@ -55,4 +55,3 @@ function simularLanzamientos(numLanzamientos) {
 }
 
 simularLanzamientos(36000);
-*/

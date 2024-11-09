@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f28b8b;
+            font-family: Arial, sans-serif;
+            color: #ffe5e5;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #f28b8b;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            
+        }
+
+        .form-container h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-transform: lowercase;
+        }
+
+        .form-container hr {
+            width: 100%;
+            border: 0.5px solid #ffe5e5;
+            margin: 10px auto;
+        }
+
+        .requirements {
+            text-align: left;
+            font-size: 14px;
+            color: #ffe5e5;
+            list-style-type: none;
+            padding: 0;
+            
+        }
+
+        .requirements li {
+            margin-bottom: 5px;
+        }
+
+        .input-field {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #f28b8b;
+        }
+
+        .submit-button {
+            background-color: #ffc1c1;
+            border: none;
+            color: #f28b8b;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        .submit-button:disabled {
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        #nombre:focus{
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        
+        <form>
+            <input type="text" class="input-field" placeholder="username" required id="nombre" autocomplete="off">
+            <hr>
+            <ul class="requirements">
+                <li id="minuscula">• 1 lowercase character</li>
+                <li id="mayuscula">• 1 uppercase character</li>
+                <li id="longitud">• 6 minimum characters</li>
+            </ul>
+            <button type="submit" class="submit-button" id="boton">Submit</button>
+        </form>
+    </div>
+
+    <script src="3.js"></script>
+</body>
+</html>
