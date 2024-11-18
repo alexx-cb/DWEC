@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Parejas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a2d9f9;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contenedor-juego {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #ffffff;
+            margin: 0 0 20px;
+        }
+
+        #cronometro {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .tablero-cartas {
+            display: grid;
+            grid-template-columns: repeat(5, 100px);
+            grid-gap: 10px;
+            justify-content: center;
+        }
+
+        .carta {
+            width: 100px;
+            height: 150px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transform: scale(1);
+            transition: transform 0.2s ease;
+        }
+
+        .carta:hover {
+            transform: scale(1.1);
+        }
+
+        .carta.volteada {
+            background-color: #ffd700;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .contenido-carta {
+            font-size: 2rem;
+            display: none;
+        }
+
+        .carta.volteada .contenido-carta {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenedor-juego">
+        <h1>JAVASCRIPT PAIRS GAME</h1>
+        <p>CLICK ANY CARD TO BEGIN</p>
+        <div id="cronometro">00:00</div>
+        <div class="tablero-cartas" id="tableroCartas">
+        </div>
+        <div>
+            <p id="resultado"></p>
+        </div>
+    </div>
+    <script src="3.js"></script>
+</body>
+</html>

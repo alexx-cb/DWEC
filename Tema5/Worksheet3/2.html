@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman Game</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #b7e12b;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-top: 1em;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      margin: 0.5em 0;
+    }
+
+    .letras {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .letras button {
+      background-color: white;
+      color: #b7e12b;
+      border: none;
+      padding: 10px;
+      font-size: 1.2em;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .pista {
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+
+    .rayas {
+      font-size: 2em;
+      margin-top: 10px;
+      letter-spacing: 10px;
+    }
+
+    .vidas {
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>HANGMAN</h1>
+  <h2>VANILLA JAVASCRIPT HANGMAN GAME</h2>
+  <p>Use the alphabet below to guess the word, or click hint to get a clue.</p>
+
+  <!-- Contenedor de letras -->
+  <div class="letras">
+    <button>A</button>
+    <button>B</button>
+    <button>C</button>
+    <button>D</button>
+    <button>E</button>
+    <button>F</button>
+    <button>G</button>
+    <button>H</button>
+    <button>I</button>
+    <button>J</button>
+    <button>K</button>
+    <button>L</button>
+    <button>M</button>
+    <button>N</button>
+    <button>O</button>
+    <button>P</button>
+    <button>Q</button>
+    <button>R</button>
+    <button>S</button>
+    <button>T</button>
+    <button>U</button>
+    <button>V</button>
+    <button>W</button>
+    <button>X</button>
+    <button>Y</button>
+    <button>Z</button>
+  </div>
+
+  <!-- Categoría de la palabra -->
+  <div class="pista">
+    <p>The Chosen Category Is F1</p>
+  </div>
+
+  <!-- Espacios de la palabra oculta -->
+  <div class="rayas">
+    <p id="rayas"></p>
+  </div>
+
+  <!-- Contador de vidas -->
+  <div class="vidas">
+    <p id="vidas">You have 10 lives</p>
+    <p id="perdiste"></p>
+  </div>
+
+
+  <script src="2.js"></script>
+</body>
+</html>

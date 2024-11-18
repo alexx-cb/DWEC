@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #FFA500;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .crono {
+            font-size: 3em;
+            margin: 20px 0;
+        }
+
+        .botones {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        button {
+            font-size: 2em;
+            padding: 30px 40px;
+            border: 2px solid white;
+            border-radius: 5px;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>STOPWATCH</h1>
+        <h2>VANILLA JAVASCRIPT STOPWATCH</h2>
+        <div class="crono" id="crono">00:00</div>
+        <div class="botones">
+            <button id="inicio">Iniciar</button>
+            <button id="detener">Detener</button>
+            <button id="reset">Reiniciar</button>
+        </div>
+    </div>
+    <script src="1.js"></script>
+</body>
+</html>
