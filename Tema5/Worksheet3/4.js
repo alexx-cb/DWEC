@@ -43,12 +43,12 @@ function crearEntrada(texto) {
     const botonEditar = document.createElement("button");
     botonEditar.className = "edit-icon";
     botonEditar.innerText = "Editar";
-    botonEditar.addEventListener("click", () => editarElemento(nuevoNodo, texto));
+    botonEditar.addEventListener("click",editarElemento(nuevoNodo, texto));
 
     const botonBorrar = document.createElement("button");
     botonBorrar.className = "delete-icon";
     botonBorrar.innerText = "Borrar";
-    botonBorrar.addEventListener("click", () => borrarElemento(nuevoNodo, texto));
+    botonBorrar.addEventListener("click", borrarElemento(nuevoNodo, texto));
 
     actionIcons.appendChild(botonEditar);
     actionIcons.appendChild(botonBorrar);
@@ -58,7 +58,6 @@ function crearEntrada(texto) {
 
     lista.appendChild(nuevoNodo);
 }
-
 
 function editarElemento(nodo, textoOriginal) {
     const nuevoTexto = prompt("Editar elemento:", textoOriginal);
@@ -71,7 +70,6 @@ function editarElemento(nodo, textoOriginal) {
         }
     }
 }
-
 
 function borrarElemento(nodo, texto) {
     const index = listacompra.indexOf(texto);

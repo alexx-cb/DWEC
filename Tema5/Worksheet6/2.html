@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart', 'bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      var chart;
+      var options = {
+        title: 'Elecciones Generales 2023',
+        width: 900,
+        height: 500,
+        legend: { position: 'none' },
+        chart: { title: 'Elecciones Generales 2023',
+                 subtitle: 'Según escaños' },
+        bars: 'horizontal', // Cambiado a horizontal
+        axes: {
+          x: {
+            0: { side: 'bottom', label: 'Escaños' } // Etiqueta en la parte inferior
+          }
+        },
+        bar: { groupWidth: "90%" },
+        animation: {
+          duration: 2000, 
+          easing: 'inAndOut' 
+        }
+      };
+
+      function drawStuff() {
+        var data1 = google.visualization.arrayToDataTable([
+          ['Partidos', 'Escaños', {role: 'style'}],
+          ["PP", 0, 'color: blue'],
+          ["PSOE", 0, 'color: red'],
+          ["VOX", 0, 'color: lightgreen'],
+          ["SUMAR", 0, 'color: purple'],
+          ['ERC', 0, 'color: yellow'],
+          ['JUNTS', 0, 'color: lightblue'],
+          ['BILDU', 0, 'color:green'],
+          ['MIXTO', 0, 'color:grey'],
+        ]);
+
+        var data2 = google.visualization.arrayToDataTable([
+          ['Partidos', 'Escaños', {role: 'style'}],
+          ["PP", 137, 'color: blue'],
+          ["PSOE", 120, 'color: red'],
+          ["VOX", 33, 'color: lightgreen'],
+          ["SUMAR", 27, 'color: purple'],
+          ['ERC', 7, 'color: yellow'],
+          ['JUNTS', 7, 'color: lightblue'],
+          ['BILDU', 6, 'color:green'],
+          ['MIXTO', 8, 'color:grey'],
+        ]);
+
+        // Inicializa el gráfico
+        chart = new google.visualization.BarChart(document.getElementById('top_x_div'));
+        chart.draw(data1, options); // Dibuja inicialmente con data1
+
+        // Alterna entre data1 y data2 cada 10 segundos con animación
+        var currentData = data1; // Inicia con data1
+        setInterval(()=> {
+          currentData = (currentData === data1) ? data2 : data1; // Alterna entre data1 y data2
+          chart.draw(currentData, options); // Redibuja el gráfico con los nuevos datos y animación
+        }, 10000); // Cada 10 segundos
+      }
+    </script>
+  </head>
+  <body>
+    <div style="display: flex; flex-wrap: wrap; flex-direction: row;">
+      <div id="top_x_div" style="width: 700px; height: 500px;"></div>
+    </div>
+  </body>
+</html>
