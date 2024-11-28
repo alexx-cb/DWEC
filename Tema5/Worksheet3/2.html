@@ -6,62 +6,70 @@
   <title>Hangman Game</title>
   <style>
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #b7e12b;
-      color: white;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b7e12b;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 
-    h1 {
-      font-size: 2em;
-      margin-top: 1em;
-    }
+    /* Centrar contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alineación vertical */
+    align-items: center;    /* Alineación horizontal */
+    min-height: 100vh;      /* Asegura que ocupe toda la altura de la ventana */
+}
 
-    h2 {
-      font-size: 1.2em;
-      margin: 0.5em 0;
-    }
+h1 {
+    font-size: 2em;
+    margin-top: 1em;
+}
 
-    .letras {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 20px;
-    }
+h2 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
 
-    .letras button {
-      background-color: white;
-      color: #b7e12b;
-      border: none;
-      padding: 10px;
-      font-size: 1.2em;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 40px;
-      height: 40px;
-      text-align: center;
-      font-weight: bold;
-    }
+.letras {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
 
-    .pista {
-      font-size: 1.2em;
-      margin-top: 20px;
-    }
+.letras button {
+    background-color: white;
+    color: #b7e12b;
+    border: none;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+}
 
-    .rayas {
-      font-size: 2em;
-      margin-top: 10px;
-      letter-spacing: 10px;
-    }
+.pista {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
 
-    .vidas {
-      font-size: 1.2em;
-      margin-top: 20px;
-    }
+.rayas {
+    font-size: 2em;
+    margin-top: 10px;
+    letter-spacing: 10px;
+}
+
+.vidas {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
   </style>
 </head>
 <body>

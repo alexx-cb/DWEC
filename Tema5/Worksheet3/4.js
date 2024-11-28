@@ -1,11 +1,12 @@
-const caja = document.getElementById("caja");
-const introducir = document.getElementById("introducir");
-const lista = document.getElementById("lista");
-const eliminar = document.getElementById("eliminar");
-
 let listacompra = [];
 
 window.onload = () => {
+    
+    const caja = document.getElementById("caja");
+    const introducir = document.getElementById("introducir");
+    const lista = document.getElementById("lista");
+    const eliminar = document.getElementById("eliminar");
+    
     const datosLocales = localStorage.getItem("listaCompra");
     if (datosLocales) {
         listacompra = JSON.parse(datosLocales);
@@ -29,7 +30,6 @@ eliminar.addEventListener("click", ()=>{
     lista.innerHTML = "";
 });
 
-
 function crearEntrada(texto) {
     const nuevoNodo = document.createElement("li");
 
@@ -43,12 +43,12 @@ function crearEntrada(texto) {
     const botonEditar = document.createElement("button");
     botonEditar.className = "edit-icon";
     botonEditar.innerText = "Editar";
-    botonEditar.addEventListener("click",editarElemento(nuevoNodo, texto));
+    botonEditar.addEventListener("click", () => editarElemento(nuevoNodo, texto));
 
     const botonBorrar = document.createElement("button");
     botonBorrar.className = "delete-icon";
     botonBorrar.innerText = "Borrar";
-    botonBorrar.addEventListener("click", borrarElemento(nuevoNodo, texto));
+    botonBorrar.addEventListener("click", () => borrarElemento(nuevoNodo, texto));
 
     actionIcons.appendChild(botonEditar);
     actionIcons.appendChild(botonBorrar);

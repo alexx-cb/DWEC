@@ -7,80 +7,83 @@
     <script defer src="RGB.js"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-        }
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+    align-items: center;    /* Centrado horizontal */
+    height: 100vh;          /* Asegura que ocupe toda la altura de la ventana */
+    margin: 0;
+    padding: 0;
+}
 
-        /* Contenedor principal para mantener todo centrado y alineado */
-        .contenedor-principal {
-            width: 400spx; /* Igual al ancho máximo de los cuadrados */
-        }
+/* Contenedor principal para mantener todo centrado y alineado */
+.contenedor-principal {
+    width: 400px; /* Ancho del contenedor */
+}
 
-        /* Estilo para el título */
-        h1 {
-            background-color: #003366; /* Azul oscuro */
-            color: white;
-            padding: 20px;
-            width: 90%; /* Para que ocupe el 100% del contenedor principal */
-            text-align: center;
-            margin: 0; /* Elimina el margen por defecto */
-        }
+/* Estilo para el título */
+h1 {
+    background-color: #003366; /* Azul oscuro */
+    color: white;
+    padding: 20px;
+    width: 90%; /* Para que ocupe el 90% del contenedor principal */
+    text-align: center;
+    margin: 0; /* Elimina el margen por defecto */
+}
 
-        /* Contenedor para los botones */
-        .dificuldad {
-            display: flex;
-            justify-content: space-between; /* Espacio entre los botones */
-            align-items: center;
-            background-color: #66b3ff; /* Azul claro */
-            padding: 10px 20px; /* Espaciado interno */
-            width: 90%; /* Para que ocupe el 100% del contenedor principal */
-        }
+/* Contenedor para los botones */
+.dificuldad {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los botones */
+    align-items: center;
+    background-color: #66b3ff; /* Azul claro */
+    padding: 10px 20px; /* Espaciado interno */
+    width: 90%; /* Para que ocupe el 90% del contenedor principal */
+}
 
-        /* Estilo para los botones */
-        button {
-            padding: 10px 20px; /* Espaciado interno de los botones */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+/* Estilo para los botones */
+button {
+    padding: 10px 20px; /* Espaciado interno de los botones */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-        #nuevo {
-            background-color: #007BFF; /* Color de fondo para el botón "Nueva partida" */
-            color: white;
-        }
+#nuevo {
+    background-color: #007BFF; /* Color de fondo para el botón "Nueva partida" */
+    color: white;
+}
 
-        #facil {
-            background-color: #28a745; /* Color de fondo para el botón "Facil" */
-            color: white;
-        }
+#facil {
+    background-color: #28a745; /* Color de fondo para el botón "Facil" */
+    color: white;
+}
 
-        #dificil {
-            background-color: #dc3545; /* Color de fondo para el botón "Dificil" */
-            color: white;
-        }
+#dificil {
+    background-color: #dc3545; /* Color de fondo para el botón "Dificil" */
+    color: white;
+}
 
-        /* Contenedor de cuadrados */
-        .contenedor {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 360px; /* Ancho máximo para permitir 3 cuadrados por fila */
-            margin: auto;
-            background-color: black; /* Fondo negro para el contenedor */
-            padding: 20px; /* Espaciado interno */
-             /* Bordes redondeados del contenedor */
-        }
+/* Contenedor de cuadrados */
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 360px; /* Ancho máximo para permitir 3 cuadrados por fila */
+    margin: 20px auto; /* Asegura que el contenedor esté centrado horizontalmente */
+    background-color: black; /* Fondo negro para el contenedor */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados del contenedor */
+}
 
-        .cuadrado {
-            width: 100px;
-            height: 100px;
-            margin: 10px;
-            border-radius: 20%; /* Bordes redondeados de los cuadrados */
-        }
+.cuadrado {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 20%; /* Bordes redondeados de los cuadrados */
+}
+
     </style>
 </head>
 <body>
