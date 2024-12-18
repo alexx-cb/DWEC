@@ -32,7 +32,7 @@ function masDatos(e){
     .catch((err)=> console.error("error: ", err));
 }
 function peticionModerna(){
-    
+    peticionEnCuerso =true;
     
     fetch("http://www.omdbapi.com/?apikey=74542ddb&s="+busqueda+"&page="+pagina, {method: "GET"})
     .then((res)=> res.json())
@@ -57,12 +57,16 @@ function peticionModerna(){
             imagen.idPelicula = item.imdbID;
             imagen.addEventListener("click", masDatos);
             
+            //por si no da 
+            imagen.addEventListener("error", (e)=>{
+                //e.target.src = "URL POR DEFECTO"
+            });
 
             lista.appendChild(nuevo);
             nuevo.appendChild(imagen);
         });
     
-        
+        peticionEnCuerso =false;
 
     })
     .catch((err)=> console.error("error: ", err));
