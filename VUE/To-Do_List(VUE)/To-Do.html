@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f4f8;
+        }
+
+        .container {
+            width: 350px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #2a2a2a;
+            margin-bottom: 20px;
+        }
+
+        .input-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #caja {
+            width: 75%;
+            padding: 8px;
+            border: 1px solid #007bff;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        #introducir {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #introducir:hover {
+            background-color: #0056b3;
+        }
+
+        .item-list {
+            list-style-type: none;
+            margin-bottom: 20px;
+            padding: 0;
+            max-height: 300px;
+            overflow-y: auto; /* Scroll si la lista crece demasiado */
+        }
+
+        .item-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            font-size: 18px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .item-list li:last-child {
+            border-bottom: none;
+        }
+
+        .item-list .item-text {
+            color: #2a2a2a;
+        }
+
+        .item-list .action-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .action-icons .edit-icon, .action-icons .delete-icon {
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .edit-icon {
+            color: #28a745; /* Color verde */
+        }
+
+        .delete-icon {
+            color: #dc3545; /* Color rojo */
+        }
+
+        .clear-btn {
+            background: none;
+            color: #dc3545;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .clear-btn:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="app">
+        <div class="container">
+            <h2>Lista de la Compra</h2>
+
+            <div class="input-section">
+                <input type="text" id="caja" v-model="contenido" v-on:keyup.enter="agregar()">
+                <button id="introducir" v-on:click="agregar()">Introducir</button>
+            </div>
+
+            <ul id="lista" class="item-list">
+                <li v-for="(datos, posicion) in listaCompra">{{ datos }}  <button v-on:click="borrar(posicion)" :key="posicion" id="eliminarElemento">eliminar</button> <button id="editar">Editar</button></li>
+            </ul>
+
+            <button id="eliminar" class="clear-btn" v-on:click="limpiar()">Limpiar Lista</button>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="To-Do.js"></script>
+</body>
+</html>
