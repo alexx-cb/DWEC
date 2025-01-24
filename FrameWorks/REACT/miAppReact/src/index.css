@@ -66,3 +66,13 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.hola{
+  display: flex;
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  color: black;
+  justify-content: center;
+  align-items : center;
+}
