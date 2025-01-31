@@ -9,6 +9,7 @@ import { Ejercicio5 } from './Ejercicios/Ejer5.jsx';
 import { Ejercicio6 } from './Ejercicios/Ejer6.jsx';
 import { Ejercicio7 } from './Ejercicios/Ejer7.jsx';
 import { Ejercicio8 } from './Ejercicios/Ejer8.jsx';
+import { Ejercicio9} from './Ejercicios/Ejer9.jsx';
 
 
 
@@ -24,6 +25,7 @@ function App() {
       <Ejercicio6 />
       <Ejercicio7 />
       <Ejercicio8 />
+      <Ejercicio9 />
       
 
     </>
